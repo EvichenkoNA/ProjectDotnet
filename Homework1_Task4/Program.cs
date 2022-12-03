@@ -13,19 +13,19 @@ if(inputLine1!=null&&inputLine2!=null&&inputLine3!=null)       //Проверя�
     int number2 = int.Parse(inputLine2);
     int number3 = int.Parse(inputLine3);
     
-    if(number1>number2 && number1>number3)
+    if(number1>number2 && number1>number3)      //Проверяем, больше ли 1-е число двух других
     {
         Console.WriteLine("max = "+ number1);
     }
     else
     {
-        if(number2>number1 && number2>number3)
+        if(number2>number1 && number2>number3)      //Проверяем, больше ли 2-е число двух других
         {
             Console.WriteLine("max = "+ number2);
         }
         else
         {
-            Console.WriteLine("max = "+ number3);
+            Console.WriteLine("max = "+ number3);      //Если два предыдущих условия не удовлетворяются, то максимальным является 3-е число.
         }
     }
 }
