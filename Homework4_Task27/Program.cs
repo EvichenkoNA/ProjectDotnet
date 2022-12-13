@@ -54,14 +54,13 @@ double VariantDigits(string inputString)
 
 string inputNum = ReadStringData("Введите число: ");
 
-DateTime t1 = DateTime.Now;
-DateTime t2 = DateTime.Now;
-
-double sumSymbols =  VariantString(inputNum);
-double sumDigits = VariantDigits(inputNum);
-
+ DateTime t1 = DateTime.Now;
+double sumSymbols = VariantString(inputNum);
 PrintData("Метод 1 (через преобразование символов) - Сумма цифр числа равна: " + sumSymbols +". Скорость метода составила "+ (DateTime.Now-t1));
-PrintData("Метод 2 (через остаток от деления)      - Сумма цифр числа равна: " + sumDigits +". Скорость метода составила "+ (DateTime.Now-t2));
+
+DateTime t2 = DateTime.Now;
+double sumDigits = VariantDigits(inputNum);
+PrintData("Метод 2 (через остаток от деления) - Сумма цифр числа равна: " + sumDigits +". Скорость метода составила "+ (DateTime.Now-t2));
 
 if (t1>t2) Console.WriteLine("Быстрее оказался 1-ый метод.");
 else Console.WriteLine("Быстрее оказался 2-ый метод.");
